@@ -96,6 +96,31 @@ Change epsilon according to the performance of the object detector
 For training deep learning based object detectors use dnn_mmod_ex.cpp (https://github.com/davisking/dlib/blob/master/examples/dnn_mmod_ex.cpp) and accordingly tune the hyperparameters for preventing the object detector from over fitting as the annotated images are captured regularly from the webcam so there is a chance that deep learning object detectors might overfit if trained on annotated images that don't show any significant temporal or spatial change in the environment around the object. Moreover after editing the dnn_mmod_ex.cpp don't forget to make and execute the executable as ./dnnmmod with path of the xml file{as per the output file}
 
 
+
+## Steps to Follow inorder to get the best use of this Software.
+Suppose you are willing to create an object detector for a Water Bottle, now as you are aware that inorder to create robust object detectors, The model must be trained on a variety of in the wild images.
+
+Let's us assume different scenarios we might prefer for creating a good object detector
+Case 1: varying light conditions, Case 2: varying angle of image capture, Case 3: varying background etc
+
+We will run the software for each of the above mentioned scenarios.
+
+For case 1 : Put user name as Case 1 , submit and record the annotated images of the Water bottle for some time. The annotations for each automatically labelled image will be stored in Case1.xml.
+
+Similarly run it for Case 2, Case 3,... Case n.. so that finally we get .xml files corresponding to each case. 
+
+Now, put all images in a single folder, copy and paste all annotations recorded in a single annotation.xml file
+(Remember that while doing the task of appending all the annotation in single .xml file, path conflicts will rise so to overcome this change path using a editor like gedit, Sublime Text which has an inbuilt find all and replace all feature , replace all path of xml labels to the current path where all images are stored.)
+
+
+Finally you will have a large dataset for training your dlib custom object detector using dnn_mmod_ex.cpp or the corresponding python alternative.
+
+
+
+
+* [davisking/dlib](https://github.com/davisking/dlib)- Machine learning library.
+
+
 ## Built With
 
 * [davisking/dlib](https://github.com/davisking/dlib)- Machine learning library.
