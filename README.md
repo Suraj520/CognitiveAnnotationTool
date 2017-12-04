@@ -118,9 +118,6 @@ Finally you will have a large dataset for training your dlib custom object detec
 
 
 
-* [davisking/dlib](https://github.com/davisking/dlib)- Machine learning library.
-
-
 ## Built With
 
 * [davisking/dlib](https://github.com/davisking/dlib)- Machine learning library.
