@@ -9,7 +9,7 @@ The software is capable of annotating huge number of images needed to create hig
 ### Prerequisites
 Anaconda 3 on windows/Linux
 
->Create a new environment using the environment.yml file supplied in the directory.
+Create a new environment using the environment.yml file supplied in the directory.
 using $conda env create -f environment.yml
 then once created, activate the environment using
 $conda activate tensorflow_env
