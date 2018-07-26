@@ -38,7 +38,7 @@ Once installed open python2/ python3 accordingly and check if dlib is installed 
 ```
 If installed Check by importing
 ```
->>from Tkinter import *
+>>from tkinter import *
 
 ```
 ### Executing
@@ -129,5 +129,5 @@ Finally you will have a large dataset for training your dlib custom object detec
 
 This project is licensed under the GNU GPLv3 License - see the [LICENSE.md](LICENSE.md) file for details
 
-
+The tool works perfectly with Python 3.6 (Last tested on Anaconda 3, Windows)
 
