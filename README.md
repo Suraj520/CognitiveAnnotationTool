@@ -1,7 +1,11 @@
 # Cognitive Annotation Tool
 
-A Tool aimed to help Researchers get rid of annotating images manually for Object Detection Tasks. The Tool currently creates annotation of images as .xml files compatible with dlib- C++ machine learning library (https://github.com/davisking/dlib). The Images and its corresponding annotation files are saved in the folder named as the Username asked during the initialisation of the software.
-The software is capable of annotating huge number of images needed to create high quality custom machine learning and Deep learning based object detectors.This tool acts as a Automatic version of Imglab(an annotation tool supported by dlib).
+A Tool aimed to help Researchers get rid of annotating images manually for Object Detection Tasks. The Tool currently creates annotation of images as .xml files compatible with dlib- C++ machine learning library (https://github.com/davisking/dlib) and csv annotation files needed to train FasterRCNN or Retinanet Models for custom object detection(https://github.com/fizyr/keras-retinanet). 
+
+The Images and its corresponding annotation XML files are saved in the folder named as the Username asked during the initialisation of the software. If you want to train faster RCNN/retinanet model for custom object detection. Then use the jupyter notebook to convert the xml file  generated in the first step to faster rcnn/retinanet compatible csv format(CSVAnnotationGenerator.ipynb) 
+
+The software is capable of annotating huge number of images needed to create high quality custom machine learning and Deep learning based object detectors.
+This tool also acts as a Automatic version of Imglab(an annotation tool supported by dlib).
 
 ## Getting Started
 
@@ -60,6 +64,17 @@ replace by /ghf/xyz/newpath/Username/ by pasting it in replace all tab of Sublim
 
 ```
 
+###Generating Faster RCNN/Retinanet compatible csv annotatation:
+
+Assuming that you have followed the previous step and generated a folder with images and their annotations in .xml format. Now Using the CSVAnnotationGenerator.ipynb jupyter notebook provided in the repository. Convert the xml annotation to your desired csv annotation file.
+
+
+###Things to note:
+```
+1. Mention correctly the path to xml file in jupyter notebook and the path where you want to generate csv annotations as annotation.txt
+2. Remember to put class name in one of the cell wherever it is mentioned.
+```
+
 
 
 ## Training custom object detectors
@@ -94,6 +109,10 @@ Finally you will have a large dataset for training your dlib custom object detec
 
 
 
+###Training Retinanet or Faster RCNN Models'
+
+Convert the above xml file with large dataset to csv annotations using the jupyter notebook file (CSVAnnotationGenerator.ipynb) and then use annotations.csv to train your model from 
+https://github.com/fizyr/keras-retinanet.
 
 ## Built With
 
