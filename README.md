@@ -11,9 +11,9 @@ Anaconda 3 on windows/Linux
 
 Create a new environment using the environment.yml file supplied in the directory.
 using
->$conda env create -f environment.yml
+>>$conda env create -f environment.yml
 then once created, activate the environment using
->$conda activate tensorflow_env
+>>$conda activate tensorflow_env
 //tensorflow_env is the name of the environment.
 
 ### Execution
