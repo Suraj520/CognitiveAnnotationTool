@@ -7,47 +7,19 @@ The software is capable of annotating huge number of images needed to create hig
 
 
 ### Prerequisites
- 
-1. Install and compile dlib-C++ library using the github repository ((https://github.com/davisking/dlib) or using pip commands 
+Anaconda 3 on windows/Linux
 
-```
-//for python 2
->>>$ sudo pip install dlib 
-//for python 3
->>>$ sudo pip3 install dlib
-```
-Once installed open python2/ python3 accordingly and check if dlib is installed by importing it.
+>Create a new environment using the environment.yml file supplied in the directory.
+using $conda env create -f environment.yml
+then once created, activate the environment using
+$conda activate tensorflow_env
+//tensorflow_env is the name of the environment.
 
-```
->>import dlib
+### Execution
 
-```
-2. Install and compile OpenCV from (http://milq.github.io/install-opencv-ubuntu-debian/) and check if it is installed.
-
-```
->>import cv2
-
-```
-3. Check if Tkinter is installed, If not Install  using 
-
-```
-\\for Python2
->>>sudo apt-get install python-tk
-\\for Python3
->>>$sudo apt-get install python3-tk
-```
-If installed Check by importing
-```
->>from tkinter import *
-
-```
-### Executing
-
-Open the terminal and run the code as
+Inside the tensorflow_env created using anaconda, run the code as
 ```
 >>$python main.py
-\\for python3
->>$python3 main.py
 ```
 
 Once the GUI of the Software appears
