@@ -153,37 +153,36 @@ def CapBBox():
     tracker = [dlib.correlation_tracker() for _ in range(len(points))]
    # Provide the tracker the initial position of the object
     [tracker[i].start_track(img, dlib.rectangle(*rect)) for i, rect in enumerate(points)]
-
+    alpha=0
     while True:
          User = str(UserName.get())
     # Read frame from device or file
          retval, img = cam.read()
-         cv2.imwrite(str(User)+"_"+str(a)+".jpg",img)
          if not retval:
             print("Device not accessible ")
             exit()
-    # Update the tracker
-         annotate=[]
-         annotate.append("<image file=" +"'" +str(os.getcwd())+"/"+str(User)+"_"+str(a) +".jpg'>")
+            # Update the tracker
          for i in range(len(tracker)):
              tracker[i].update(img)
-        # Get the position of th object, draw a
-        # bounding box around it and display it.
+            #Get the position of th object, draw a
+            #bounding box around it and display it.
              rect = tracker[i].get_position()
              pt1 = (int(rect.left()), int(rect.top()))
              pt2 = (int(rect.right()), int(rect.bottom()))
              cv2.rectangle(img, pt1, pt2, (255, 255, 255), 2)
              print("Object {} Location [{}, {}] \r".format(i, pt1, pt2),)
-             
-             annotate.append("<box top="+"'"+str(int(round(abs(rect.top()))))+"'" +" left="+"'"+str(int(round(abs(rect.left()))))+"'" + " width="+"'"+str(int(round(abs(rect.right())))-int(round(abs(rect.left()))))+ "'" +  " height="+"'"+str(int(round(abs(rect.bottom())))- int(round(abs(rect.top()))))+"'" +" />")
-#	 annotate.append("</image>")
-         for i in range(len(points)+1):
-             f.write(annotate[i]+"\n")
-         list1=[]
-         list1.append("</image>")
-         f.write(list1[0]+"\n") 
+             if alpha%5==0:
+                cv2.imwrite(str(User)+"_"+str(alpha)+".jpg",img)
+                annotate=[]
+                annotate.append("<image file=" +"'" +str(os.getcwd())+"/"+str(User)+"_"+str(alpha) +".jpg'>")
+                annotate.append("<box top="+"'"+str(int(round(abs(rect.top()))))+"'" +" left="+"'"+str(int(round(abs(rect.left()))))+"'" + " width="+"'"+str(int(round(abs(rect.right())))-int(round(abs(rect.left()))))+ "'" +  " height="+"'"+str(int(round(abs(rect.bottom())))- int(round(abs(rect.top()))))+"'" +" />")
+#	        annotate.append("</image>")
+                for i in range(len(points)+1):
+                    f.write(annotate[i]+"\n")
+                list1=[]
+                list1.append("</image>")
+                f.write(list1[0]+"\n") 
          a = a+1
-
          loc = (int(rect.left()), int(rect.top()-20))
          txt = "Object tracked at [{}, {}]".format(pt1, pt2)
          cv2.putText(img, txt, loc , cv2.FONT_HERSHEY_SIMPLEX, .5, (255,255,255), 1)
@@ -198,6 +197,7 @@ def CapBBox():
             cam.release()
             cv2.destroyAllWindows()
             break
+         alpha+=1
     # Continue until the user presses ESC key
     #if cv2.waitKey(1) == 27:
 
