@@ -1,6 +1,6 @@
 # Cognitive Annotation Tool
 
-A Tool aimed to help Researchers get rid of annotating images manually for Object Detection Tasks. The Tool currently creates annotation of images as .xml files compatible with dlib- C++ machine learning library (https://github.com/davisking/dlib) and csv annotation files needed to train FasterRCNN or Retinanet Models for custom object detection(https://github.com/fizyr/keras-retinanet). 
+A Tool aimed to help Researchers get rid of annotating images manually for Object Detection Tasks using the webcam feed. The Tool currently creates annotation of images as .xml files compatible with dlib- C++ machine learning library (https://github.com/davisking/dlib) and csv annotation files needed to train FasterRCNN or Retinanet Models for custom object detection(https://github.com/fizyr/keras-retinanet). 
 
 The Images and its corresponding annotation XML files are saved in the folder named as the Username asked during the initialisation of the software. If you want to train faster RCNN/retinanet model for custom object detection. Then use the jupyter notebook to convert the xml file  generated in the first step to faster rcnn/retinanet compatible csv format(CSVAnnotationGenerator.ipynb) 
 
