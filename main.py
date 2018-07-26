@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import os
 from distutils.dir_util import mkpath
-from Tkinter import *
+from tkinter import *
 #*********************************************************************************************************************************
 #defining the functions
 #*********************************************************************************************************************************
@@ -31,26 +31,26 @@ def run(im, multi=False):
 #defining the function for annotating the image in two modes : Single Object and Multiple Object Annotation Mode."
     def callback(event, x, y, flags, param):
         if event == cv2.EVENT_LBUTTONDOWN:
-	    if multi == False and len(pts_2) == 1:
-		print "Warning : Single Tracking mode currently enabled can't select multiple."
-		print "You can delete the previously selected image by Pressing d button on the Keyboard!."
-		return
-            run.mouse_down = True
-            pts_1.append((x, y))
+                if multi == False and len(pts_2) == 1:
+                       print("Warning : Single Tracking mode currently enabled can't select multiple.")
+                       print("You can delete the previously selected image by Pressing d button on the Keyboard!.")
+                       return
+                run.mouse_down = True
+                pts_1.append((x, y))
         elif event == cv2.EVENT_LBUTTONUP and run.mouse_down == True:
             run.mouse_down = False
             pts_2.append((x, y))
-            print "Object Coordinates : [{}, {}]".format(pts_1[-1], pts_2[-1])
+            print("Object Coordinates : [{}, {}]".format(pts_1[-1], pts_2[-1]))
         elif event == cv2.EVENT_MOUSEMOVE and run.mouse_down == True:
             im_draw = im.copy()
             cv2.rectangle(im_draw, pts_1[-1], (x, y), (255,255,255), 3)
             cv2.imshow(window_name, im_draw)
 
-    print "Firstly Press then release the mouse around the object that you wish to annotate \nFor multiple object annotation you can repeat the press and release multiple times"
+    print("Firstly Press then release the mouse around the object that you wish to annotate \nFor multiple object annotation you can repeat the press and release multiple times")
     cv2.setMouseCallback(window_name, callback)
 
-    print "To continue with the selected objects to annotate, Press P."
-    print "Press esc, followed by closing the gui to exit the program."
+    print("To continue with the selected objects to annotate, Press P.")
+    print("Press esc, followed by closing the gui to exit the program.")
 
     while True:
         # Use Mouse to draw the rectangular boxes around the image.
@@ -103,7 +103,7 @@ def check_point(points):
 
 def SubmitUserName():
    User = str(UserName.get())
-   print type(User)
+   print(type(User))
    mkpath(User)
    path = str(os.getcwd())+"/"+(User)
    #going to the directory
@@ -124,14 +124,14 @@ def CapBBox():
     s.append("<name>Dlib-C++ compatible dataset</name>")
     s.append("<comment>Created by Suraj @ IIITG - email : hrishabhsuraj52@gmail.com., website: https://sites.google.com/view/surajhrishabh52/ , linkedin:https://in.linkedin.com/in/suraj-b85555109 </comment> ")
     s.append("<images>")
-    for i in xrange(6):
+    for i in range(6):
         f.write(s[i]+"\n")
-    print "Press `p` to start with automatic annotation of selected objects "
+    print("Press `p` to start with automatic annotation of selected objects ")
     while True:
     # Retrieve an image and Display it.
           retval, img = cam.read()
           if not retval:
-             print "Frame/ device not accessible, Please check the device id in CV2.VideoCapture or your webcam."
+             print("Frame/ device not accessible, Please check the device id in CV2.VideoCapture or your webcam.")
              exit()
           break
           cv2.namedWindow("Image", cv2.WINDOW_NORMAL)
@@ -142,7 +142,7 @@ def CapBBox():
     points = run(img, multi=True)
 
     if not points:
-       print "ERROR: No object to be annotated"
+       print("ERROR: No object to be annotated")
        exit()
 
     cv2.namedWindow("Image", cv2.WINDOW_NORMAL)
@@ -150,7 +150,7 @@ def CapBBox():
 
    # Initial co-ordinates of the object to be tracked using dlib correlation tracker
    # Create the tracker object
-    tracker = [dlib.correlation_tracker() for _ in xrange(len(points))]
+    tracker = [dlib.correlation_tracker() for _ in range(len(points))]
    # Provide the tracker the initial position of the object
     [tracker[i].start_track(img, dlib.rectangle(*rect)) for i, rect in enumerate(points)]
 
@@ -160,12 +160,12 @@ def CapBBox():
          retval, img = cam.read()
          cv2.imwrite(str(User)+"_"+str(a)+".jpg",img)
          if not retval:
-            print "Device not accessible "
+            print("Device not accessible ")
             exit()
     # Update the tracker
          annotate=[]
          annotate.append("<image file=" +"'" +str(os.getcwd())+"/"+str(User)+"_"+str(a) +".jpg'>")
-         for i in xrange(len(tracker)):
+         for i in range(len(tracker)):
              tracker[i].update(img)
         # Get the position of th object, draw a
         # bounding box around it and display it.
@@ -173,11 +173,11 @@ def CapBBox():
              pt1 = (int(rect.left()), int(rect.top()))
              pt2 = (int(rect.right()), int(rect.bottom()))
              cv2.rectangle(img, pt1, pt2, (255, 255, 255), 2)
-             print "Object {} Location [{}, {}] \r".format(i, pt1, pt2),
+             print("Object {} Location [{}, {}] \r".format(i, pt1, pt2),)
              
              annotate.append("<box top="+"'"+str(int(round(abs(rect.top()))))+"'" +" left="+"'"+str(int(round(abs(rect.left()))))+"'" + " width="+"'"+str(int(round(abs(rect.right())))-int(round(abs(rect.left()))))+ "'" +  " height="+"'"+str(int(round(abs(rect.bottom())))- int(round(abs(rect.top()))))+"'" +" />")
 #	 annotate.append("</image>")
-         for i in xrange(len(points)+1):
+         for i in range(len(points)+1):
              f.write(annotate[i]+"\n")
          list1=[]
          list1.append("</image>")
@@ -193,7 +193,7 @@ def CapBBox():
             s=[]
             s.append("</images>")
             s.append("</dataset>")
-            for i in xrange(2):
+            for i in range(2):
                 f.write(s[i]+"\n")
             cam.release()
             cv2.destroyAllWindows()
@@ -209,7 +209,7 @@ def CamSet():
     cam = cv2.VideoCapture(0)
     # If Camera Device is not opened, exit the program
     if not cam.isOpened():
-        print "Video device or file couldn't be opened"
+        print("Video device or file couldn't be opened")
         exit()
     CapBBox()
 
