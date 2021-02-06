@@ -1,11 +1,15 @@
-# Cognitive Annotation Tool
+## Cognitive Annotation Tool
+####About the Software 
+* An opensource annotation tool aimed to help researchers get rid of annotating images manually for computer vision tasks like object detection and object localisation using the webcam feed. 
+* The Tool creates annotation of images in <a href="http://host.robots.ox.ac.uk/pascal/VOC/"> Pascal VOC </a> format as .xml files corresponding to each image. The tool also generates annotations as csv file.
+* The generated annotations are compatible for training machine learning/deep learning models using <a href="https://github.com/davisking/dlib"> Dlib- C++ </a> machine learning library or <a href="https://arxiv.org/abs/1708.02002"> Retinanet </a> based object detection models easily for custom object detection. For training retina-net based model, The user can refer to this <a href="https://github.com/fizyr/keras-retinanet">Github Repo. </a> 
+* The Images and its corresponding annotation XML files are saved in the folder named entered by user in the GUI prompt during the initialisation of the software. 
+* If the user wants to train a multi-stage object detector like Fast RCNN/Faster RCNN/Retinanet model for custom object detection then this jupyter notebook can be used to convert the Pascal VOC Annotation xml file(s).
+* The software is capable of annotating bulk of images needed to create high quality custom machine learning/deep learning based object detectors from scratch or via Transfer learning.
+* This tool can act as a automated version of <a href="https://imglab.in/"> ImgLab </a>
 
-A Tool aimed to help Researchers get rid of annotating images manually for Object Detection Tasks using the webcam feed. The Tool currently creates annotation of images as .xml files compatible with dlib- C++ machine learning library (https://github.com/davisking/dlib) and csv annotation files needed to train FasterRCNN or Retinanet Models for custom object detection(https://github.com/fizyr/keras-retinanet). 
-
-The Images and its corresponding annotation XML files are saved in the folder named as the Username asked during the initialisation of the software. If you want to train faster RCNN/retinanet model for custom object detection. Then use the jupyter notebook to convert the xml file  generated in the first step to faster rcnn/retinanet compatible csv format(CSVAnnotationGenerator.ipynb) 
-
-The software is capable of annotating huge number of images needed to create high quality custom machine learning and Deep learning based object detectors.
-This tool also acts as a Automatic version of Imglab(an annotation tool supported by dlib).
+## Windows Executable
+<a href=""> Download Link </a>
 
 ## Getting Started
 

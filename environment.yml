@@ -1,4 +1,4 @@
-name: tensorflow_env
+name: CognitiveAnnotationTool
 channels:
   - conda-forge
   - defaults
@@ -77,5 +77,5 @@ dependencies:
     - pytz==2018.5
     - pywin32==223
     - tensorflow-tensorboard==0.4.0
-prefix: C:\Anaconda\envs\tensorflow_env
+prefix: C:\Anaconda\envs\CognitiveAnnotationTool
 
