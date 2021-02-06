@@ -11,123 +11,111 @@
 ## Windows Executable
 <a href=""> Download Link </a>
 
-## Getting Started
+## Build from Source
 
+### Prerequisite
+1. Anaconda/Miniconda installed on Windows/Linux platform (Last checked to work on Windows 10)
+2. Integrated webcam(preferably) or an external webcam.
 
-### Prerequisites
-Anaconda 3 on windows/Linux
-
-Create a new environment using the environment.yml file supplied in the directory.
-using
+#### Environment Configuration
+1. Create a new environment using the <a href=""> environment.yml </a>
 ```
->>$conda env create -f environment.yml
+$ conda env create -f environment.yml
 ```
-then once created, activate the environment using
+2. Activate the environment using the following command
 ```
->>$conda activate tensorflow_env
-```
-//tensorflow_env is the name of the environment.
-
-### Execution
-
-Inside the tensorflow_env created using anaconda, run the code as
-```
->>$python main.py
+$ conda activate CognitiveAnnotationTool
 ```
 
-Once the GUI of the Software appears
-
-Follow the steps mentioned below:
-
+### Launch the GUI Annotation Tool
 ```
-1.Enter the username or a custom class name for which you want the Images to be annotated then click on the button " Submit User Name". To ensure that username is accepted check that the path from which the code is run must contain a Folder named with the submitted username. "Avoid Clicking the Submit User Name to many times as it may lead to creation of multiple Folders".
-
-2.Once the username is submitted, Click on the Capture Bounding Box(s) button until two image windows containing snapshots of Image captured from the webcam appears. The two Image windows may be overlapping, slide the window to find the image window named aos  'Window for Drawing bounding box'.
-
-3.Using Mouse Release and Hold events draw bounding box(s) around the objects you wish to annotate. If you want to create a object detector capable of detecting  multiple objects draw multiple bounding box(s) around the object. (Keep track of the number of objects annotated from the terminal. If by mistake a wrong bounding box is drawn use 'd' key to delete.)
-
-4.Once bounding box(s) is/are drawn, press p to start automatic annotation of images from Realtime webcam feed. The annotated images(Images and the annotation.xml file containing the coordinates of the bounding box[dlib- compatible] are saved in the directory named by the usename.)
-
-(Multiple object annotation depends upon the processing power of the system on which the code is executed as lag persists as more than 10 objects are annotated over webcam feed using a 2.5 Ghz (quadcore Intel pentium, 4 GB Ram) system.
-
-```
-###Editing the annotation.xml file
-```
-Edit the path of the image mentioned in the annotation.xml file by using a Sublime Text/gedit/emacs/atom or equivalent editor by replacing the path mentioned in single quotes using find all and replace all command
-
-In Sublime text go to Find >> then go to Find.. >> then follow the steps mentioned in the below example.
-
-for example
-For changing
-<image file='/home/abc/Desktop/Username/Username_x.jpg'>
-by 
-<image file='/ghf/xyz/newpath/Username/Username_x.jpg'>
-paste /home/abc/Desktop/Username/ to find all in the above mentioned editor
-and once all changes are found
-replace by /ghf/xyz/newpath/Username/ by pasting it in replace all tab of Sublime Text for example
-
+$ python main.py  #run the script from root directory of the repository with the conda environment activated.
 ```
 
-###Generating Faster RCNN/Retinanet compatible csv annotatation:
+Upon successful execution of the script, A GUI should appear as depicted below.
 
-Assuming that you have followed the previous step and generated a folder with images and their annotations in .xml format. Now Using the CSVAnnotationGenerator.ipynb jupyter notebook provided in the repository. Convert the xml annotation to your desired csv annotation file.
+[][]
 
+#### Instructions to follow to annotate custom images using GUI.
+Once the GUI of the Software appears. Follow these steps to get started with the annotation.
+> 1.Enter the username or a custom class name for which you want the images to be annotated then click on the button " Submit User Name". To ensure that username is accepted, open the file explorer and search for an empty directory with the name entered in the prompt earlier. 
+>> Avoid Clicking the <strong> submit user name </strong> button too many times as it may lead to the creation of multiple folders.
 
-###Things to note:
+Image goes here[][]
+
+>  2. Once the username is submitted, click on the <strong> Capture Bounding Box(s) </strong> button until two image windows containing snapshots of Image captured from the webcam appears. 
+> > The two Image windows may be overlapping, slide the window to find the image window named as  'Window for Drawing bounding box'.
+
+Image goes here[][]
+
+> 3. Using mouse click-release and click-hold events, Draw bounding box(s) around the objects you wish to annotate.
+> >  If you want to create a object detector capable of detecting multiple objects draw multiple bounding box(s) around the object. (Keep track of the number of objects annotated from the terminal. If by mistake a wrong bounding box is drawn use 'd' key to delete.
+
+Image goes here[][]
+
+> 4.Once bounding box(s) is/are drawn, press p to start automatic annotation of images over realtime webcam feed.
+>> RGB Images and their corresponding bounding box annotations are appended iteratively in the annotation.xml file which are saved in the directory created by user in Step 1.
+
+> 5. Now, The user can use annotation.xml file saved in Directory created in Step1, to either generate Pascal VOC annotations (i.e an xml file containing annotation corresponding to each image) using the <a href=""> jupyter notebook file </a> or csv files(train,test,val) for training RetinaNet architecture using this <a href=""> jupyter notebook file </a>.
+
+> 6. The user can use the prepared annotation files to train the object detection network using transfer learning or from scratch.
+
+#### Remarks:
+> Multiple object annotation depends upon the processing power of the system on which the code is executed as lag persists if bounding box of more than 10 objects are created over webcam feed using a 2.5 Ghz (Quadcore Intel pentium, 4 GB Ram) system.
+
+#### Extra Notes.
+
+###### 1. Editing the annotation.xml file
+
+If the user wants to use the annotations generated on one system onto other(typically a cloud server like GCP/Azure/AWS), The following steps can be incorporated. 
+
+* Edit the path of all the images labelled in the annotation.xml file by using a Text editor (Sublime Text/gedit/emacs/atom etc) through find all and replace all functionality.
+  > The path is described within single quotes inside annotation.xml file which needs to be changed as per the path of Instance.
+  >>For example: In <strong> sublime text </strong>, press Ctrl+F then follow the steps as described below.
+  >>> For changing ```<image file='/home/abc/Desktop/Username/Username_x.jpg'>``` by 
+   ```<image file='/ghf/xyz/newpath/Username/Username_x.jpg'>```, Paste ```/home/abc/Desktop/Username/``` to the <strong> find all section </strong> in the above mentioned editor and once all changes are located, replace it by ```/ghf/xyz/newpath/Username/``` by pasting it in replace all tab of the same editor.
+
+### CSV generator
 ```
 1. Mention correctly the path to xml file in jupyter notebook and the path where you want to generate csv annotations as annotation.txt
 2. Remember to put class name in one of the cell wherever it is mentioned.
 ```
+  
+### 2. Steps to follow to get best results from the software
 
+> Suppose you are willing to create an object detector for a Water Bottle, now as you are aware that inorder to create robust object detectors, The model must be trained on a variety of in the wild images.
+>> Let's us assume different scenarios that we might prefer for creating a best fit/accurate object detector with high mAP score
+ >>> * Scenario 1: Varying the light conditions.
+>>> * Scenario 2: Varying the angle of image acquisition device(if,handheld).
+>>> * Scenario 3: Non-uniform background etc.
 
+> Then, the user must run the software for each of the above mentioned scenarios.
+>> * For Scenario 1 : Put user name as Case 1, submit and record the annotated images of the Water bottle for some time. The annotations for each automatically labelled image will be stored in Case1.xml.
+>>> Similarly repeat the execution for Case 2, Case 3,... Case n.. so that finally we get .xml files corresponding to each case. 
 
-## Training custom object detectors
+> Now, Put all images in a single folder, copy and paste all annotations recorded in a single annotation.xml file
+>> Remember that while doing the task of appending all the annotation into a single .xml file, path conflicts may pop up which can be resolved by using the aforementioned strategy of ```find all and replace all``` in any text editor.
 
-Once annotated images(images and annotation.xml files ) are generated, It can be used to create custom object detectors using dlib-C++
-machine learning library. To train machine learning hogg detectors using dlib, Use  train_object_detector.py on dlib repository(https://github.com/davisking/dlib/blob/master/python_examples/train_object_detector.py). Edit the hyperparameters by adjusting the epsilon and C in the file
-```
-Change epsilon according to the performance of the object detector
->>>options.epsilon = 1e-6
-```
-For training deep learning based object detectors use dnn_mmod_ex.cpp (https://github.com/davisking/dlib/blob/master/examples/dnn_mmod_ex.cpp) and accordingly tune the hyperparameters for preventing the object detector from over fitting as the annotated images are captured regularly from the webcam so there is a chance that deep learning object detectors might overfit if trained on annotated images that don't show any significant temporal or spatial change in the environment around the object. Moreover after editing the dnn_mmod_ex.cpp don't forget to make and execute the executable as ./dnnmmod with path of the xml file{as per the output file}
+> Finally you will have a large dataset for training your machine learning/deep learning based object detector from scratch(incase transfer learning via ImageNet is not possible).
 
-
-
-## Steps to Follow inorder to get the best use of this Software.
-Suppose you are willing to create an object detector for a Water Bottle, now as you are aware that inorder to create robust object detectors, The model must be trained on a variety of in the wild images.
-
-Let's us assume different scenarios we might prefer for creating a good object detector
-Case 1: varying light conditions, Case 2: varying angle of image capture, Case 3: varying background etc
-
-We will run the software for each of the above mentioned scenarios.
-
-For case 1 : Put user name as Case 1 , submit and record the annotated images of the Water bottle for some time. The annotations for each automatically labelled image will be stored in Case1.xml.
-
-Similarly run it for Case 2, Case 3,... Case n.. so that finally we get .xml files corresponding to each case. 
-
-Now, put all images in a single folder, copy and paste all annotations recorded in a single annotation.xml file
-(Remember that while doing the task of appending all the annotation in single .xml file, path conflicts will rise so to overcome this change path using a editor like gedit, Sublime Text which has an inbuilt find all and replace all feature , replace all path of xml labels to the current path where all images are stored.)
-
-
-Finally you will have a large dataset for training your dlib custom object detector using dnn_mmod_ex.cpp or the corresponding python alternative.
-
-
-
-###Training Retinanet or Faster RCNN Models'
-
-Convert the above xml file with large dataset to csv annotations using the jupyter notebook file (CSVAnnotationGenerator.ipynb) and then use annotations.csv to train your model from 
-https://github.com/fizyr/keras-retinanet.
-
-## Built With
+### Built With
 
 * [davisking/dlib](https://github.com/davisking/dlib)- Machine learning library.
 
-
-
-
 ## License
 
-This project is licensed under the GNU GPLv3 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the LGPLv3.0 License - see the [LICENSE.md](LICENSE.md) file for details
 
-The tool works perfectly with Python 3.6 (Last tested on Anaconda 3, Windows)
 
+### Citation
+If you find the tool helpful, please cite
+```
+@inproceedings{kool2018visual,
+  title={Visual machine intelligence for home automation},
+  author={Kool, Ish and Kumar, Dharmendra and Barma, Shovan and others},
+  booktitle={2018 3rd International Conference on Internet of Things: Smart Innovation and Usages (IoT-SIU)},
+  pages={1--6},
+  year={2018},
+  organization={IEEE}
+}
+```

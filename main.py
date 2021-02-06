@@ -103,7 +103,7 @@ def check_point(points):
 
 def SubmitUserName():
    User = str(UserName.get())
-   print(type(User))
+   print("Directory Created !")
    mkpath(User)
    path = str(os.getcwd())+"/"+(User)
    #going to the directory
@@ -122,7 +122,7 @@ def CapBBox():
     s.append("<?xml-stylesheet type='text/xsl' href='image_metadata_stylesheet.xsl'?>")
     s.append("<dataset>")
     s.append("<name>Dlib-C++ compatible dataset</name>")
-    s.append("<comment>Created by Suraj @ IIITG - email : hrishabhsuraj52@gmail.com., website: https://sites.google.com/view/surajhrishabh52/ , linkedin:https://in.linkedin.com/in/suraj-b85555109 </comment> ")
+    s.append("<comment>Created by Suraj @ IIITG - email : hrishabhsuraj52@gmail.com., Linkedin: https://in.linkedin.com/in/suraj52  </comment> ")
     s.append("<images>")
     for i in range(6):
         f.write(s[i]+"\n")
@@ -240,8 +240,8 @@ Label(root, text="4. Press'p' on your keyboard once BBox(s) are created to start
 Label(root, text="Note : **Please Move objects in BBox slowly to create better annotations.**",fg ='red').grid(row=11,column=0)
 Label(root, text="5. Want to stop Annotation Press 'esc'on keyboard once then press cross on the gui to close or (win + esc)",fg ='blue').grid(row=12,column=0)
 Label(root, text="*********Created by : Suraj*********************",fg ='red').grid(row=13,column=0)
-Label(root,text ="Email Id : hrishabhsuraj52@gmail.com., website: https://sites.google.com/view/surajhrishabh52/ ;LinkedIn: https://in.linkedin.com/in/suraj-b85555109 ",fg='black').grid(row=14,column=0)
-
+Label(root,text ="Email Id : hrishabhsuraj52@gmail.com. LinkedIn: https://in.linkedin.com/in/suraj52 ",fg='black').grid(row=14,column=0)
+Label(root,text ="Use the tool for research purpose only! ",fg='black').grid(row=14,column=0)
 
 root.mainloop()
 
