@@ -1,4 +1,5 @@
 ## Cognitive Annotation Tool
+![Work in Progress](Temp/WorkinProgress.gif)
 #### About the Software 
 * An opensource annotation tool aimed to help researchers get rid of annotating images manually for computer vision tasks like object detection and object localisation using the webcam feed. 
 * The Tool creates annotation of images in <a href="http://host.robots.ox.ac.uk/pascal/VOC/"> Pascal VOC </a> format as .xml files corresponding to each image. The tool also generates annotations as csv file.
@@ -9,7 +10,7 @@
 * This tool can act as a automated version of <a href="https://imglab.in/"> ImgLab </a>
 
 ## Windows Executable
-<a href=""> Download Link </a>
+<a href=""> Download Link </a> :: Coming soon.
 
 ## Build from Source
 
@@ -108,7 +109,7 @@ This project is licensed under the LGPLv3.0 License - see the [LICENSE.md](LICEN
 
 
 ### Citation
-If you find the tool helpful, please cite
+If you find the tool helpful, please cite my paper.
 ```
 @inproceedings{kool2018visual,
   title={Visual machine intelligence for home automation},
@@ -119,3 +120,5 @@ If you find the tool helpful, please cite
   organization={IEEE}
 }
 ```
+### Restrictions of usage
+Strictly for Research purposes!
