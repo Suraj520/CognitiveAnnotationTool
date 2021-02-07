@@ -80,7 +80,7 @@ If the user wants to use the annotations generated on one system onto other(typi
 ### CSV generator
 ```
 1. Mention correctly the path to xml file in jupyter notebook and the path where you want to generate csv annotations as annotation.txt
-2. Remember to put class name in one of the cell wherever it is mentioned.
+2. Remember to put class name in one of the cell wherever it is mentioned. The generated CSVs can directly be used to train RetinaNet models.
 ```
 <a href="https://github.com/Suraj520/CognitiveAnnotationTool/blob/master/CSVAnnotationGenerator.ipynb "> XML to CSV Converter </a>
 
