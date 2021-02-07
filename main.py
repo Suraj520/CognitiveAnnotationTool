@@ -96,7 +96,7 @@ def check_point(points):
 
 def SubmitUserName():
    User = str(UserName.get())
-   print(type(User))
+   print("Directory created!!")
    mkpath(User)
    path = str(os.getcwd())+"/"+(User)
    #going to the directory
