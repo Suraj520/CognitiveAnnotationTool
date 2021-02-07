@@ -130,3 +130,4 @@ If you find the tool helpful, please cite my paper.
 ```
 ### Restrictions of usage
 Strictly for Research purposes!
+For commercial usages, obtain a license from hrishabhsuraj52@gmail.com
