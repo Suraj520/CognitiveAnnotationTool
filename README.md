@@ -84,6 +84,10 @@ If the user wants to use the annotations generated on one system onto other(typi
 ```
 <a href="https://github.com/Suraj520/CognitiveAnnotationTool/blob/master/CSVAnnotationGenerator.ipynb "> XML to CSV Converter </a>
 
+### Pascal VOC XML generator
+```
+After you execute main.py, you should be getting a core xml file which you can easily split into multiple xml files using few lines of code. Neverthless, I will try to upload the helper script soon :)
+```
   
 ### 2. Steps to follow to get best results from the software
 
