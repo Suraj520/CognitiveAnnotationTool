@@ -1,5 +1,4 @@
 ## Cognitive Annotation Tool
-![Work in Progress](Temp/WorkinProgress.gif)
 #### About the Software 
 * An opensource annotation tool aimed to help researchers get rid of annotating images manually for computer vision tasks like object detection and object localisation using the webcam feed. 
 * The Tool creates annotation of images in <a href="http://host.robots.ox.ac.uk/pascal/VOC/"> Pascal VOC </a> format as .xml files corresponding to each image. The tool also generates annotations as csv file.
