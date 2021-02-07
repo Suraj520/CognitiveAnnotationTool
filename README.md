@@ -130,4 +130,4 @@ If you find the tool helpful, please cite my paper.
 ```
 ### Restrictions of usage
 Strictly for Research purposes!
-For commercial usages, obtain a license from hrishabhsuraj52@gmail.com
+For commercial usages, obtain a license [![Gmail Badge](https://img.shields.io/badge/-hrishabhsuraj52@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:hrishabhsuraj52@gmail.com)](mailto:hrishabhsuraj52@gmail.com)
