@@ -1,3 +1,6 @@
+```
+If you find this repo useful, kindly hit a star :).
+```
 ## Cognitive Annotation Tool
 #### About the Software 
 * An opensource annotation tool aimed to help researchers get rid of annotating images manually for computer vision tasks like object detection and object localisation using the webcam feed. 
