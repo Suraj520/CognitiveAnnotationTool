@@ -1,7 +1,8 @@
 ```
 If you find this repo useful, kindly hit a star :, Feel free to extend the functionalities of the repo via PR requests.
 ```
-
+## Demo Video
+<a href="https://youtu.be/T67T9KhiwFU"> Link </a>
 
 ## Cognitive Annotation Tool
 #### About the Software 
@@ -39,24 +40,20 @@ $ python main.py  #run the script from root directory of the repository with the
 
 Upon successful execution of the script, A GUI should appear as depicted below.
 
-[][]
 
 #### Instructions to follow to annotate custom images using GUI.
 Once the GUI of the Software appears. Follow these steps to get started with the annotation.
 > 1.Enter the username or a custom class name for which you want the images to be annotated then click on the button " Submit User Name". To ensure that username is accepted, open the file explorer and search for an empty directory with the name entered in the prompt earlier. 
 >> Avoid Clicking the <strong> submit user name </strong> button too many times as it may lead to the creation of multiple folders.
 
-Image goes here[][]
 
 >  2. Once the username is submitted, click on the <strong> Capture Bounding Box(s) </strong> button until two image windows containing snapshots of Image captured from the webcam appears. 
 > > The two Image windows may be overlapping, slide the window to find the image window named as  'Window for Drawing bounding box'.
 
-Image goes here[][]
+
 
 > 3. Using mouse click-release and click-hold events, Draw bounding box(s) around the objects you wish to annotate.
 > >  If you want to create a object detector capable of detecting multiple objects draw multiple bounding box(s) around the object. (Keep track of the number of objects annotated from the terminal. If by mistake a wrong bounding box is drawn use 'd' key to delete.
-
-Image goes here[][]
 
 > 4.Once bounding box(s) is/are drawn, press p to start automatic annotation of images over realtime webcam feed. Once annotation is finished click <strong>Exit </strong> button on the GUI.
 >> RGB Images and their corresponding bounding box annotations are appended iteratively in the annotation.xml file which are saved in the directory created by user in Step 1.
