@@ -1,0 +1,32 @@
+name: CognitiveAnnotationTool
+channels:
+  - conda-forge/label/cf201901
+  - defaults
+dependencies:
+  - blas=1.0=mkl
+  - ca-certificates=2018.11.29=ha4d7672_0
+  - certifi=2018.8.24=py35_1001
+  - dlib=19.9=np19py35_0
+  - icc_rt=2019.0.0=h0cc432a_1
+  - icu=58.2=ha925a31_3
+  - intel-openmp=2019.4=245
+  - jpeg=9c=hfa6e2cd_1001
+  - libpng=1.6.34=h7602738_2
+  - libtiff=4.0.9=h36446d0_1002
+  - libwebp=0.5.2=vc14_7
+  - mkl=2018.0.3=1
+  - numpy=1.9.3=py35h0e52b17_2
+  - opencv=3.4.1=py35_200
+  - openssl=1.0.2o=vc14_0
+  - pip=10.0.1=py35_0
+  - python=3.5.6=he025d50_0
+  - qt=5.6.2=h2639256_8
+  - setuptools=40.2.0=py35_0
+  - sqlite=3.26.0=hfa6e2cd_1000
+  - vc=14.2=h21ff451_1
+  - vs2015_runtime=14.27.29016=h5e58377_2
+  - wheel=0.36.2=pyhd3eb1b0_0
+  - wincertstore=0.2=py35hfebbdb8_0
+  - zlib=1.2.11=vc14_0
+prefix: C:\Users\Jarvis\.conda\envs\CognitiveAnnotationTool
+

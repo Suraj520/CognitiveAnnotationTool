@@ -18,7 +18,7 @@
 2. Integrated webcam(preferably) or an external webcam, check this via ```$ python webcam_test.py```
 
 #### Environment Configuration
-1. Create a new environment using the <a href=""> environment.yml </a>
+1. Create a new environment using the <a href="https://github.com/Suraj520/CognitiveAnnotationTool/environment.yml"> environment.yml </a>
 ```
 $ conda env create -f environment.yml
 ```
