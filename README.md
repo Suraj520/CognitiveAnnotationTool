@@ -16,7 +16,7 @@
 
 ### Prerequisite
 1. Anaconda/Miniconda installed on Windows/Linux platform (Last checked to work on Windows 10)
-2. Integrated webcam(preferably) or an external webcam.
+2. Integrated webcam(preferably) or an external webcam, check this via ```$ python webcam_test.py```
 
 #### Environment Configuration
 1. Create a new environment using the <a href=""> environment.yml </a>
@@ -54,7 +54,7 @@ Image goes here[][]
 
 Image goes here[][]
 
-> 4.Once bounding box(s) is/are drawn, press p to start automatic annotation of images over realtime webcam feed.
+> 4.Once bounding box(s) is/are drawn, press p to start automatic annotation of images over realtime webcam feed. Once annotation is finished click <strong>Exit </strong> button on the GUI.
 >> RGB Images and their corresponding bounding box annotations are appended iteratively in the annotation.xml file which are saved in the directory created by user in Step 1.
 
 > 5. Now, The user can use annotation.xml file saved in Directory created in Step1, to either generate Pascal VOC annotations (i.e an xml file containing annotation corresponding to each image) using the <a href=""> jupyter notebook file </a> or csv files(train,test,val) for training RetinaNet architecture using this <a href=""> jupyter notebook file </a>.
@@ -110,6 +110,7 @@ This project is licensed under the LGPLv3.0 License - see the [LICENSE.md](LICEN
 
 ### Citation
 If you find the tool helpful, please cite my paper.
+```My name is not in BibTex file(though I am the first author) due to Google Scholar not being able to parse mononymous names -_- ```
 ```
 @inproceedings{kool2018visual,
   title={Visual machine intelligence for home automation},
