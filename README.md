@@ -69,9 +69,6 @@ After you execute main.py, you should be getting a core xml file which you can e
 
 ###### 2. Steps to follow to get best results from the software
 ![Performance](media/performance%20booster.png)
-### Built With
-
-* [davisking/dlib](https://github.com/davisking/dlib)- Machine learning library.
 
 ## License
 
