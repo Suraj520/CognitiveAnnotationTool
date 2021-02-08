@@ -45,19 +45,12 @@ Once the GUI of the Software appears. Follow these steps to get started with the
 ![step5](media/step%205.png)
 
 #### Remarks:
-> Multiple object annotation depends upon the processing power of the system on which the code is executed as lag persists if bounding box of more than 10 objects are created over webcam feed using a 2.5 Ghz (Quadcore Intel pentium, 4 GB Ram) system.
+![remarks](media/remarks.png)
 
 #### Extra Notes.
 
 ###### 1. Editing the annotation.xml file
-
-If the user wants to use the annotations generated on one system onto other(typically a cloud server like GCP/Azure/AWS), The following steps can be incorporated. 
-
-* Edit the path of all the images labelled in the annotation.xml file by using a Text editor (Sublime Text/gedit/emacs/atom etc) through find all and replace all functionality.
-  > The path is described within single quotes inside annotation.xml file which needs to be changed as per the path of Instance.
-  >>For example: In <strong> sublime text </strong>, press Ctrl+F then follow the steps as described below.
-  >>> For changing ```<image file='/home/abc/Desktop/Username/Username_x.jpg'>``` by 
-   ```<image file='/ghf/xyz/newpath/Username/Username_x.jpg'>```, Paste ```/home/abc/Desktop/Username/``` to the <strong> find all section </strong> in the above mentioned editor and once all changes are located, replace it by ```/ghf/xyz/newpath/Username/``` by pasting it in replace all tab of the same editor.
+![extra](media/extra%20notes.png)
 
 ###### A. CSV generator
 <a href="https://github.com/Suraj520/CognitiveAnnotationTool/tree/master/notebooks/CSVAnnotationGenerator.ipynb "> XML to CSV Converter </a>
