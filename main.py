@@ -194,9 +194,9 @@ if __name__ == "__main__":
     Label(root, text="1. Enter User Name and Click <<Submit User Name>> Only Once**",fg ='blue').grid(row=7,column=0)
     Label(root, text="2.Click Capture Bounding Box(s)",fg ='blue').grid(row=8,column=0)
     Label(root, text="3.Select the `Window for Drawing Bounding Box` and draw the bounding box using mouse around the ROI(s)",fg ='blue').grid(row=9,column=0)
-    Label(root, text="4.Press'p' on your keyboard once BBox(s) are created to start annotation",fg ='blue').grid(row=10,column=0)
+    Label(root, text="4.Press'p' on your keyboard once BBox(s) are created to start annotation,close the annotation by pressing esc buttom",fg ='blue').grid(row=10,column=0)
     Label(root, text="Note : **Please Move objects in BBox slowly to create quality annotations.**",fg ='red').grid(row=11,column=0)
-    Label(root, text="5. Close the software by pressing the exit button.",fg ='blue').grid(row=12,column=0)
+    Label(root, text="5. Close the software by pressing the exit button on GUI.",fg ='blue').grid(row=12,column=0)
     Label(root, text="**Created by : Suraj : Linkedin: https://www.linkedin.com/in/suraj52/**",fg ='red').grid(row=13,column=0)
     Label(root,text ="Only for Research Purposes!",fg='black').grid(row=14,column=0)
 
