@@ -1,6 +1,4 @@
-```
-If you find this repo useful, kindly hit a star :), Feel free to extend the functionalities of the repo via PR requests.
-```
+![greet](media/greet.png)
 ## Demo Video
 <a href="https://youtu.be/T67T9KhiwFU"> Link </a>
 
