@@ -35,7 +35,7 @@ $ conda activate CognitiveAnnotationTool
 
 ### Launch the GUI Annotation Tool
 ```
-$ python main.py  #run the script from root directory of the repository with the conda environment activated.
+$ python src/main.py  #run the script from root directory of the repository with the conda environment activated.
 ```
 
 Upon successful execution of the script, A GUI should appear as depicted below.
@@ -82,7 +82,7 @@ If the user wants to use the annotations generated on one system onto other(typi
 1. Mention correctly the path to xml file in jupyter notebook and the path where you want to generate csv annotations as annotation.txt
 2. Remember to put class name in one of the cell wherever it is mentioned. The generated CSVs can directly be used to train RetinaNet models.
 ```
-<a href="https://github.com/Suraj520/CognitiveAnnotationTool/blob/master/CSVAnnotationGenerator.ipynb "> XML to CSV Converter </a>
+<a href="https://github.com/Suraj520/CognitiveAnnotationTool/tree/master/notebooks/CSVAnnotationGenerator.ipynb "> XML to CSV Converter </a>
 
 ###### Pascal VOC XML generator
 ```
