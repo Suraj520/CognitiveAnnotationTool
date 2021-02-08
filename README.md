@@ -88,7 +88,14 @@ If the user wants to use the annotations generated on one system onto other(typi
 ```
 After you execute main.py, you should be getting a core xml file which you can easily split into multiple xml files using few lines of code. Neverthless, I will try to upload the helper script soon :)
 ```
-  
+
+###### DLIB DNN-MOD/HOG+SVM COMPATIBLE
+<a href="http://dlib.net/dnn_mmod_ex.cpp.html"> Dlib DNN_MMOD</a>
+<a href="https://github.com/davisking/dlib/blob/master/python_examples/train_object_detector.py"> Dlib HOG+SVM </a>
+```
+Use the annotations as it is without any modification to train dlib's DNN_mmod or HOG+SVM object detector. Don't forget to add correlation tracking to your realtime pipeline for better results :).
+```
+
 ###### 2. Steps to follow to get best results from the software
 
 > Suppose you are willing to create an object detector for a Water Bottle, now as you are aware that inorder to create robust object detectors, The model must be trained on a variety of in the wild images.
