@@ -77,19 +77,19 @@ If the user wants to use the annotations generated on one system onto other(typi
   >>> For changing ```<image file='/home/abc/Desktop/Username/Username_x.jpg'>``` by 
    ```<image file='/ghf/xyz/newpath/Username/Username_x.jpg'>```, Paste ```/home/abc/Desktop/Username/``` to the <strong> find all section </strong> in the above mentioned editor and once all changes are located, replace it by ```/ghf/xyz/newpath/Username/``` by pasting it in replace all tab of the same editor.
 
-###### CSV generator
+###### A. CSV generator
 ```
 1. Mention correctly the path to xml file in jupyter notebook and the path where you want to generate csv annotations as annotation.txt
 2. Remember to put class name in one of the cell wherever it is mentioned. The generated CSVs can directly be used to train RetinaNet models.
 ```
 <a href="https://github.com/Suraj520/CognitiveAnnotationTool/tree/master/notebooks/CSVAnnotationGenerator.ipynb "> XML to CSV Converter </a>
 
-###### Pascal VOC XML generator
+###### B. Pascal VOC XML generator
 ```
 After you execute main.py, you should be getting a core xml file which you can easily split into multiple xml files using few lines of code. Neverthless, I will try to upload the helper script soon :)
 ```
 
-###### DLIB DNN-MOD/HOG+SVM COMPATIBLE
+###### C. DLIB DNN-MOD/HOG+SVM COMPATIBLE
 <a href="http://dlib.net/dnn_mmod_ex.cpp.html"> Dlib DNN_MMOD</a>
 <a href="https://github.com/davisking/dlib/blob/master/python_examples/train_object_detector.py"> Dlib HOG+SVM </a>
 ```
