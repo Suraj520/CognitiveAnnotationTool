@@ -25,18 +25,12 @@ If you find this repo useful, kindly hit a star :), Feel free to extend the func
 
 #### Environment Configuration
 1. Create a new environment using the <a href="https://github.com/Suraj520/CognitiveAnnotationTool/blob/master/environment.yml"> environment.yml </a>
-```
-$ conda env create -f environment.yml
-```
-2. Activate the environment using the following command
-```
-$ conda activate CognitiveAnnotationTool
-```
+![Introduction](media/EnvSetup.png)
 
+2. Activate the environment using the following command
+![Activate](media/EnvironmentActivate.png)
 ### Launch the GUI Annotation Tool
-```
-$ python src/main.py  #run the script from root directory of the repository with the conda environment activated.
-```
+![Run](media/RunCmd.png)
 
 Upon successful execution of the script, A GUI should appear as depicted below.
 
