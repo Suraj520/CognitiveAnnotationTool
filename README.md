@@ -29,12 +29,13 @@ If you find this repo useful, kindly hit a star :), Feel free to extend the func
 
 2. Activate the environment using the following command
 ![Activate](media/EnvironmentActivate.png)
-### Launch the GUI Annotation Tool
+#### Launch the GUI Annotation Tool
 ![run](media/runcmd.png)
 Upon successful execution of the script, A GUI should appear as depicted below.
 
 
 #### Instructions to follow to annotate custom images using GUI.
+
 Once the GUI of the Software appears. Follow these steps to get started with the annotation.
 > 1.Enter the username or a custom class name for which you want the images to be annotated then click on the button " Submit User Name". To ensure that username is accepted, open the file explorer and search for an empty directory with the name entered in the prompt earlier. 
 >> Avoid Clicking the <strong> submit user name </strong> button too many times as it may lead to the creation of multiple folders.
