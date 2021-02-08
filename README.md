@@ -38,24 +38,11 @@ Upon successful execution of the script, A GUI should appear as depicted below.
 #### Instructions to follow to annotate custom images using GUI.
 
 Once the GUI of the Software appears. Follow these steps to get started with the annotation.
-> 1.Enter the username or a custom class name for which you want the images to be annotated then click on the button " Submit User Name". To ensure that username is accepted, open the file explorer and search for an empty directory with the name entered in the prompt earlier. 
->> Avoid Clicking the <strong> submit user name </strong> button too many times as it may lead to the creation of multiple folders.
-
-
->  2. Once the username is submitted, click on the <strong> Capture Bounding Box(s) </strong> button until two image windows containing snapshots of Image captured from the webcam appears. 
-> > The two Image windows may be overlapping, slide the window to find the image window named as  'Window for Drawing bounding box'.
-
-
-
-> 3. Using mouse click-release and click-hold events, Draw bounding box(s) around the objects you wish to annotate.
-> >  If you want to create a object detector capable of detecting multiple objects draw multiple bounding box(s) around the object. (Keep track of the number of objects annotated from the terminal. If by mistake a wrong bounding box is drawn use 'd' key to delete.
-
-> 4.Once bounding box(s) is/are drawn, press p to start automatic annotation of images over realtime webcam feed. Once annotation is finished click <strong>Exit </strong> button on the GUI.
->> RGB Images and their corresponding bounding box annotations are appended iteratively in the annotation.xml file which are saved in the directory created by user in Step 1.
-
-> 5. Now, The user can use annotation.xml file saved in Directory created in Step1, to either generate Pascal VOC annotations (i.e an xml file containing annotation corresponding to each image) using the <a href=""> jupyter notebook file </a> or csv files(train,test,val) for training RetinaNet architecture using this <a href=""> jupyter notebook file </a>.
-
-> 6. The user can use the prepared annotation files to train the object detection network using transfer learning or from scratch.
+![step1](media/step%201.png)
+![step2](media/step%202.png)
+![step3](media/step%203.png)
+![step4](media/step%204.png)
+![step5](media/step%205.png)
 
 #### Remarks:
 > Multiple object annotation depends upon the processing power of the system on which the code is executed as lag persists if bounding box of more than 10 objects are created over webcam feed using a 2.5 Ghz (Quadcore Intel pentium, 4 GB Ram) system.
