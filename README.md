@@ -85,6 +85,7 @@ If the user wants to use the annotations generated on one system onto other(typi
 ```
 
 ###### B. Pascal VOC XML generator
+Coming soon: With TFOD Compatibility(Tensorflow Object detection toolbox).
 ```
 After you execute main.py, you should be getting a core xml file which you can easily split into multiple xml files using few lines of code. Neverthless, I will try to upload the helper script soon :)
 ```
