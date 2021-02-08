@@ -30,7 +30,7 @@ If you find this repo useful, kindly hit a star :), Feel free to extend the func
 2. Activate the environment using the following command
 ![Activate](media/EnvironmentActivate.png)
 ### Launch the GUI Annotation Tool
-![run](media/RunCmd.png)
+![run](media/runcmd.png)
 Upon successful execution of the script, A GUI should appear as depicted below.
 
 
