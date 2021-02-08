@@ -54,10 +54,8 @@ Once the GUI of the Software appears. Follow these steps to get started with the
 
 ###### A. CSV generator
 <a href="https://github.com/Suraj520/CognitiveAnnotationTool/tree/master/notebooks/CSVAnnotationGenerator.ipynb "> XML to CSV Converter </a>
-```
-1. Mention correctly the path to xml file in jupyter notebook and the path where you want to generate csv annotations as annotation.txt
-2. Remember to put class name in one of the cell wherever it is mentioned. The generated CSVs can directly be used to train RetinaNet models.
-```
+
+![csv generator](media/csv%20generator.png)
 
 ###### B. Pascal VOC XML generator
 Coming soon: With TFOD Compatibility(Tensorflow Object detection toolbox).
@@ -68,27 +66,11 @@ After you execute main.py, you should be getting a core xml file which you can e
 ###### C. DLIB DNN-MOD/HOG+SVM COMPATIBLE
 <a href="http://dlib.net/dnn_mmod_ex.cpp.html"> Dlib DNN_MMOD</a>
 <a href="https://github.com/davisking/dlib/blob/master/python_examples/train_object_detector.py"> Dlib HOG+SVM </a>
-```
-Use the annotations as it is without any modification to train dlib's DNN_mmod or HOG+SVM object detector. Don't forget to add correlation tracking to your realtime pipeline for better results :).
-```
+
+![dlib](media/dlib.png)
 
 ###### 2. Steps to follow to get best results from the software
-
-> Suppose you are willing to create an object detector for a Water Bottle, now as you are aware that inorder to create robust object detectors, The model must be trained on a variety of in the wild images.
->> Let's us assume different scenarios that we might prefer for creating a best fit/accurate object detector with high mAP score
- >>> * Scenario 1: Varying the light conditions.
->>> * Scenario 2: Varying the angle of image acquisition device(if,handheld).
->>> * Scenario 3: Non-uniform background etc.
-
-> Then, the user must run the software for each of the above mentioned scenarios.
->> * For Scenario 1 : Put user name as Case 1, submit and record the annotated images of the Water bottle for some time. The annotations for each automatically labelled image will be stored in Case1.xml.
->>> Similarly repeat the execution for Case 2, Case 3,... Case n.. so that finally we get .xml files corresponding to each case. 
-
-> Now, Put all images in a single folder, copy and paste all annotations recorded in a single annotation.xml file
->> Remember that while doing the task of appending all the annotation into a single .xml file, path conflicts may pop up which can be resolved by using the aforementioned strategy of ```find all and replace all``` in any text editor.
-
-> Finally you will have a large dataset for training your machine learning/deep learning based object detector from scratch(incase transfer learning via ImageNet is not possible).
-
+![Performance](media/performance%20booster.png)
 ### Built With
 
 * [davisking/dlib](https://github.com/davisking/dlib)- Machine learning library.
