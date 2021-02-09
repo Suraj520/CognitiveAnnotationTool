@@ -1,5 +1,8 @@
 ## All rights reserved to Suraj ####
 ### Please note the code is non-optimized intentionally to restrict its reproducibility in its exact form and I may give the optimized code upon your query for a commercial license.
+
+# If you are reviewing the code for assesment for any applied research/dev positions. kindly review: https://github.com/Suraj520/Python_developer_track with more weightage.
+
 #importing the modules
 import dlib
 import cv2
