@@ -1,3 +1,5 @@
+## All rights reserved to Suraj ####
+### Please note the code is non-optimized intentionally to restrict its reproducibility in its exact form and I may give the optimized code upon your query for a commercial license.
 #importing the modules
 import dlib
 import cv2
@@ -25,8 +27,7 @@ def run(im, multi=False):
     def callback(event, x, y, flags, param):
         if event == cv2.EVENT_LBUTTONDOWN:
                 if multi == False and len(pts_2) == 1:
-                       print("Warning : Single Tracking mode currently enabled can't select multiple.")
-                       print("You can delete the previously selected image by Pressing d button on the Keyboard!.")
+                       print("Single Tracking mode currently enabled can't select multiple.")
                        return
                 run.mouse_down = True
                 pts_1.append((x, y))
@@ -43,8 +44,9 @@ def run(im, multi=False):
     cv2.setMouseCallback(window_name, callback)
 
     print("To continue with the selected objects to annotate, Press P.")
-    print("Press esc, followed by closing the gui to exit the program.")
-
+    print("Press esc, followed by pressing the exit button.")
+## All rights reserved to Suraj ####
+### Please note the code is non-optimized intentionally to restrict its reproducibility in its exact form and I may give the optimized code upon your query for a commercial license.
     while True:
         # Use Mouse to draw the rectangular boxes around the image.
         window_name_2 = "Objects to be annotated"
@@ -69,11 +71,12 @@ def run(im, multi=False):
     corrected_point=check_point(point)
 
     return corrected_point
-
-#function for collecting Bounding box points from the annotations drawn over the image using mouse press and release events
-def check_point(points):
+## All rights reserved to Suraj ####
+### Please note the code is non-optimized intentionally to restrict its reproducibility in its exact form and I may give the optimized code upon your query for a commercial license.
+#function for collecting Bounding box points_suraj_tool from the annotations drawn over the image using mouse press and release events
+def check_point(points_suraj_tool):
     out=[]
-    for point in points:
+    for point in points_suraj_tool:
         minx=point[0]
         #to find min and max x coordinates
         if point[0]<point[2]:
@@ -91,9 +94,11 @@ def check_point(points):
         out.append((minx,miny,maxx,maxy))
 
     return out
-
+## All rights reserved to Suraj ####
+### Please note the code is non-optimized intentionally to restrict its reproducibility in its exact form and I may give the optimized code upon your query for a commercial license.
 #Definition of Functions on button click
-
+## All rights reserved to Suraj ####
+### Please note the code is non-optimized intentionally to restrict its reproducibility in its exact form and I may give the optimized code upon your query for a commercial license.
 def SubmitUserName():
    User = str(UserName.get())
    print("Directory created!!")
@@ -101,22 +106,25 @@ def SubmitUserName():
    path = str(os.getcwd())+"/"+(User)
    #going to the directory
    os.chdir(path)
-
+## All rights reserved to Suraj ####
+### Please note the code is non-optimized intentionally to restrict its reproducibility in its exact form and I may give the optimized code upon your query for a commercial license.
 def CapBBox():
     a =0
     User = str(UserName.get())
     cam = cv2.VideoCapture(0)
     f= open("annotation.xml","w+")
-    s = []
-    s.append("<?xml version='1.0' encoding='ISO-8859-1'?>")
-    s.append("<?xml-stylesheet type='text/xsl' href='image_metadata_stylesheet.xsl'?>")
-    s.append("<dataset>")
-    s.append("<name>Dlib-C++ compatible dataset</name>")
-    s.append("<comment>Created by Suraj - email : hrishabhsuraj52@gmail.com.,linkedin:https://in.linkedin.com/in/suraj52 </comment> ")
-    s.append("<images>")
+    suraj_list = []
+    suraj_list.append("<?xml version='1.0' encoding='ISO-8859-1'?>")
+    suraj_list.append("<?xml-stylesheet type='text/xsl' href='image_metadata_stylesheet.xsl'?>")
+    suraj_list.append("<dataset>")
+    suraj_list.append("<name>Dlib-C++ compatible dataset</name>")
+    suraj_list.append("<comment>Created by Suraj - email : hrishabhsuraj52@gmail.com.,linkedin:https://in.linkedin.com/in/suraj52 </comment> ")
+    suraj_list.append("<images>")
     for i in range(6):
-        f.write(s[i]+"\n")
+        f.write(suraj_list[i]+"\n")
     print("Press `p` to start with automatic annotation of selected objects ")
+    ## All rights reserved to Suraj ####
+### Please note the code is non-optimized intentionally to restrict its reproducibility in its exact form and I may give the optimized code upon your query for a commercial license.
     frame_count = 0
     while True:
          User = str(UserName.get())
@@ -124,14 +132,14 @@ def CapBBox():
          #Freeze at frame 1 and prompt for user annotation.
          #let the user annotate on frame 1 and then accordingly as per the number of bounding boxes, initialise the trackers
          if frame_count == 0:
-             points = run(img, multi=True)
-             if not points:
+             points_suraj_tool = run(img, multi=True)
+             if not points_suraj_tool:
                 print("ERROR: No object to be annotated")
                 exit()
              # Create the tracker object
-             tracker = [dlib.correlation_tracker() for _ in range(len(points))]
+             tracker = [dlib.correlation_tracker() for _ in range(len(points_suraj_tool))]
              # Provide the tracker the initial position of the object
-             [tracker[i].start_track(img, dlib.rectangle(*rect)) for i, rect in enumerate(points)]
+             [tracker[i].start_track(img, dlib.rectangle(*rect)) for i, rect in enumerate(points_suraj_tool)]
              frame_count+=1
          #start writing from frame 2 onwards
          cv2.imwrite(str(User)+"_"+str(a)+".jpg",img)
@@ -152,31 +160,34 @@ def CapBBox():
              print("Object {} Location [{}, {}] \r".format(i, pt1, pt2),)
              annotate.append("<box top="+"'"+str(int(round(abs(rect.top()))))+"'" +" left="+"'"+str(int(round(abs(rect.left()))))+"'" + " width="+"'"+str(int(round(abs(rect.right())))-int(round(abs(rect.left()))))+ "'" +  " height="+"'"+str(int(round(abs(rect.bottom())))- int(round(abs(rect.top()))))+"'" +" />")
 
-         for i in range(len(points)+1):
+         for i in range(len(points_suraj_tool)+1):
              f.write(annotate[i]+"\n")
          list1=[]
          list1.append("</image>")
          f.write(list1[0]+"\n")
          a = a+1
-
+## All rights reserved to Suraj ####
+### Please note the code is non-optimized intentionally to restrict its reproducibility in its exact form and I may give the optimized code upon your query for a commercial license.
          loc = (int(rect.left()), int(rect.top()-20))
          txt = "Object tracked at [{}, {}]".format(pt1, pt2)
          cv2.putText(img, txt, loc , cv2.FONT_HERSHEY_SIMPLEX, .5, (255,255,255), 1)
          cv2.namedWindow("Image", cv2.WINDOW_NORMAL)
          cv2.imshow("Image", img)
          if cv2.waitKey(1)==27:
-            s=[]
-            s.append("</images>")
-            s.append("</dataset>")
+            suraj_list=[]
+            suraj_list.append("</images>")
+            suraj_list.append("</dataset>")
             for i in range(2):
-                f.write(s[i]+"\n")
+                f.write(suraj_list[i]+"\n")
             cam.release()
             cv2.destroyAllWindows()
             break
-
+## All rights reserved to Suraj ####
+### Please note the code is non-optimized intentionally to restrict its reproducibility in its exact form and I may give the optimized code upon your query for a commercial license.
 def Exit():
     sys.exit()
-
+## All rights reserved to Suraj ####
+### Please note the code is non-optimized intentionally to restrict its reproducibility in its exact form and I may give the optimized code upon your query for a commercial license.
 if __name__ == "__main__":
     root = Tk()
     root.title('Cogntive Annotation Tool')
@@ -188,7 +199,8 @@ if __name__ == "__main__":
     Button(root, text='Submit User Name' ,command=SubmitUserName,fg ='yellow',bg='black' ).grid(row=3, column=1, sticky=W, pady=4)
     Button(root, text='Capture Bounding Box(s)',command=CapBBox ,fg ='yellow',bg='black').grid(row=5, column=0, sticky=W, pady=4)
     Button(root, text='Exit',command=Exit ,fg ='yellow',bg='black').grid(row=18, column=1, sticky=W, pady=4)
-
+## All rights reserved to Suraj ####
+### Please note the code is non-optimized intentionally to restrict its reproducibility in its exact form and I may give the optimized code upon your query for a commercial license.
                                   #Instruction to use the software
     Label(root, text=">>>>>>>>>>>>>>>>>>>>>>>>Steps to Use the software :>>>>>>>>>>>>>>>>>>>>>>>>",fg ='red').grid(row=6,column=0)
     Label(root, text="1. Enter User Name and Click <<Submit User Name>> Only Once**",fg ='blue').grid(row=7,column=0)
@@ -202,3 +214,6 @@ if __name__ == "__main__":
 
     root.mainloop()
     SubmitUserName()
+## All rights reserved to Suraj ####
+### Please note the code is non-optimized intentionally to restrict its reproducibility in its exact form and I may give the optimized code upon your query for a commercial license.
+#Support if you like the software :)
