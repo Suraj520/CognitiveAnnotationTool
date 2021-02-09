@@ -77,7 +77,7 @@ This project is licensed under the LGPLv3.0 License - see the [LICENSE.md](LICEN
 
 ### Citation
 If you find the tool helpful, please cite my paper.
-```My name is not in BibTex file(though I am the first author) due to Google Scholar not being able to parse mononymous names -_- ```
+```My name is not in BibTex file(though I am the first author) due to Google Scholar not being able to parse mononymous names :( ```
 ```
 @inproceedings{kool2018visual,
   title={Visual machine intelligence for home automation},
