@@ -10,7 +10,7 @@
 * The Images and its corresponding annotation XML files are saved in the folder named entered by user in the GUI prompt during the initialisation of the software. 
 * If the user wants to train a multi-stage object detector like Fast RCNN/Faster RCNN/Retinanet model for custom object detection then this jupyter notebook can be used to convert the Pascal VOC Annotation xml file(s).
 * The software is capable of annotating bulk of images needed to create high quality custom machine learning/deep learning based object detectors from scratch or via Transfer learning.
-* This tool can act as a automated version of <a href="https://imglab.in/"> ImgLab </a>
+* This tool can act as an automated version of <a href="https://imglab.in/"> ImgLab </a>
 
 ## Windows Executable
 <a href=""> Download Link </a> :: Coming soon.
