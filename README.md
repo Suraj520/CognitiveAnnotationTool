@@ -85,11 +85,11 @@ After you execute main.py, you should be getting a core xml file which you can e
 #### Made with Dlib 
 <a href="https://github.com/davisking/dlib"> Dlib </a>
 
-#### Future Work
-1. I plan to remove python backend of the Annotation tool with C++ for better realtime performance.
-2. I plan to support various format of annotations used in commonly used Object detection architectures like Yolo, Architectures in Tensorflow Object detection besides the currently supported RetinaNet and Dlib's HOG+SVM/DNN_mmod object detector algorithms.
-## License
+#### Future Work(Contribution appreciated :))
+1. Remove python backend of the Annotation tool with C++ for better realtime performance.
+2. Enable support for various format of annotations used in commonly used Object detection architectures like Yolo, Architectures in Tensorflow Object detection besides the currently supported RetinaNet and Dlib's HOG+SVM/DNN_mmod object detector algorithms.
 
+## License
 This project is licensed under the LGPLv3.0 License - see the [LICENSE.md](LICENSE.md) file for details
 
 
