@@ -79,6 +79,15 @@ After you execute main.py, you should be getting a core xml file which you can e
 #### Python Library on PyPi
 ```Coming soon!```
 
+#### FAQs.
+1. <strong> Reason for not using cv2.Multibox tracker </strong>: I have tried and experimented with various tracking algorithms available in Opencv's multibox tracker but Dlib's correlation tracker outperformed each one of them. If you wish to experiment more, feel free to redirect yourself to the <a href="https://github.com/Suraj520/CognitiveAnnotationTool/releases/tag/V0.1_beta"> Pre-release </a> where I have already incorporated OpenCV's various multibox tracker instead of Dlib's Correlation tracker.
+
+#### Made with Dlib 
+<a href="https://github.com/davisking/dlib"> Dlib </a>
+
+#### Future Work
+1. I plan to remove python backend of the Annotation tool with C++ for better realtime performance.
+2. I plan to support various format of annotations used in commonly used Object detection architectures like Yolo, Architectures in Tensorflow Object detection besides the currently supported RetinaNet and Dlib's HOG+SVM/DNN_mmod object detector algorithms.
 ## License
 
 This project is licensed under the LGPLv3.0 License - see the [LICENSE.md](LICENSE.md) file for details
