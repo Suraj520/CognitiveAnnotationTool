@@ -76,6 +76,9 @@ After you execute main.py, you should be getting a core xml file which you can e
 ###### 2. Steps to follow to get best results from the software
 ![Performance](media/performance%20booster.png)
 
+#### Python Library on PyPi
+```Coming soon!```
+
 ## License
 
 This project is licensed under the LGPLv3.0 License - see the [LICENSE.md](LICENSE.md) file for details
