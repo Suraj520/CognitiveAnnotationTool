@@ -51,8 +51,8 @@ Once the GUI of the Software appears. Follow these steps to get started with the
 ![extra](media/extra%20notes.png)
 
 ###### A. CSV generator
-<a href="https://github.com/Suraj520/CognitiveAnnotationTool/tree/master/notebooks/CSVAnnotationGenerator.ipynb "> XML to CSV Converter(Notebook)</a>
-<a href="https://github.com/Suraj520/CognitiveAnnotationTool/blob/master/src/CSVAnnotationGenerator.py"> XML to CSV Converter</a>
+* <a href="https://github.com/Suraj520/CognitiveAnnotationTool/tree/master/notebooks/CSVAnnotationGenerator.ipynb "> XML to CSV Converter(Notebook)</a>
+* <a href="https://github.com/Suraj520/CognitiveAnnotationTool/blob/master/src/CSVAnnotationGenerator.py"> XML to CSV Converter</a>
 ![csv generator](media/csv%20generator.png)
 
 ###### B. Pascal VOC XML generator
