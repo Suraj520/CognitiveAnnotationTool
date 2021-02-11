@@ -15,7 +15,7 @@
 ## Windows Executable
 <a href=""> Download Link </a> :: Coming soon.
 
-## Build from Source
+## Execute using terminal
 
 ### Prerequisite
 1. Anaconda/Miniconda installed on Windows/Linux platform (Last checked to work on Windows 10)
