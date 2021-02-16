@@ -63,9 +63,6 @@ After you execute main.py, you should be getting a core xml file which you can e
 
 ###### C. Yolo versions compatible Annotation generator
 Coming soon:
-```
-After you execute main.py, you should be getting a core xml file which you can easily split into multiple xml files using few lines of code. Neverthless, I will try to upload the helper script soon :)
-```
 
 ###### D. DLIB DNN-MOD/HOG+SVM COMPATIBLE
 <a href="http://dlib.net/dnn_mmod_ex.cpp.html"> Dlib DNN_MMOD</a>
