@@ -103,6 +103,4 @@ If you find the tool helpful, please cite my paper.
   organization={IEEE}
 }
 ```
-### Restrictions of usage
-Strictly for Research purposes!
-For commercial usages, drop a mail to obtain license/usage rights. [![Gmail Badge](https://img.shields.io/badge/-hrishabhsuraj52@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:hrishabhsuraj52@gmail.com)](mailto:hrishabhsuraj52@gmail.com)
+
